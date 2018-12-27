@@ -7,6 +7,7 @@ export class VehicleRoutes {
     
     public routes(app): void{
         app.route('/vehicle')
+        .get(this.vehicleController.getVehicle)
         .post(this.vehicleController.addNewVehicle);
     }
 }

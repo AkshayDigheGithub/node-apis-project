@@ -15,4 +15,15 @@ export class VehicleController{
             res.json(vehicle);
         })
     }
+
+    // get all vehicle
+
+    public getVehicle(req: Request, res: Response){
+        Vehicle.find({}, (err, vehicle)=>{
+            if(err){
+                res.send(err);
+            }
+            res.json(vehicle);
+        })
+    }
 }
